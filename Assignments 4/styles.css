@@ -1,0 +1,32 @@
+body{
+	background-color: black;
+	background-size: 1400px 650px;
+	background-repeat: no-repeat;
+}
+a
+{
+	
+	border-color:black; 
+	color:White;
+	text-decoration: none;
+	padding: 30px;
+	font-size: 20px;
+}
+table, th, td{
+	border: 3px solid black;
+	padding: 8px;
+}
+table{
+	border-spacing: 30px;
+}
+img{
+	height: 350px;
+	width: 350px;
+}
+p{
+	color:#fb9300;
+}
+label
+{
+	color:white	;
+}
