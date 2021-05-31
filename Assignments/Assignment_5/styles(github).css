@@ -1,0 +1,31 @@
+
+ label{
+    color: white;
+}
+button {
+ background-color: #4CAF50; /* Green */
+ border: none;
+ color: white;
+ padding: 6px 80px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+}
+p{
+   white-space: nowrap;
+   color: white;
+}
+img
+{
+   width: 100px;
+   height: 100px;
+}
+body {
+       background-color: black;
+       text-align: center;
+       
+        padding: 20px 20px 20px;
+         margin: 100px;
+
+     }
