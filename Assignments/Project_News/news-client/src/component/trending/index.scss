@@ -1,0 +1,186 @@
+@import "../scss/variables.scss";
+
+.trending {
+  width: 100%;
+  padding: 20px 20px;
+  height: 70px;
+
+  .container {
+    width: 86%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    .trending-tag {
+      background-color: $primaryColor;
+
+      width: 130px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      padding: 3px;
+      font-weight: bold;
+      font-size: 15px;
+      .trending-icon {
+        font-size: 15px;
+        color: white;
+      }
+      span {
+        color: white;
+      }
+    }
+    .trending-content {
+      max-width: calc(100% - 130px);
+      font-weight: bold;
+      line-height: 40px;
+      height: 40px;
+      overflow: hidden;
+      margin-left: 20px;
+      color: $generalTextColor;
+      @for $i from 1 through 5 {
+        li:nth-child(#{$i}) {
+          animation-name: transform;
+          animation-duration: 20s;
+          animation-iteration-count: infinite;
+
+          a {
+            color: $primaryColor;
+          }
+          // &:hover{
+          //   animation-play-state: paused;
+          // }
+        }
+      }
+    }
+  }
+}
+
+// @keyframes transform {
+//   0% {
+//     transform: translate3d(0, 0, 0);
+//     -webkit-transform: translate3d(0, 0, 0);
+//     -moz-transform: translate3d(0, 0, 0);
+//     -ms-transform: translate3d(0, 0, 0);
+//     -o-transform: translate3d(0, 0, 0);
+//   }
+//   20% {
+//     transform: translate3d(0, -40px, 0);
+//     -webkit-transform: translate3d(0, -40px, 0);
+//     -moz-transform: translate3d(0, -40px, 0);
+//     -ms-transform: translate3d(0, -40px, 0);
+//     -o-transform: translate3d(0, -40px, 0);
+//   }
+//   40% {
+//     transform: translate3d(0, -80px, 0);
+//     -webkit-transform: translate3d(0, -80px, 0);
+//     -moz-transform: translate3d(0, -80px, 0);
+//     -ms-transform: translate3d(0, -80px, 0);
+//     -o-transform: translate3d(0, -80px, 0);
+//   }
+//   60% {
+//     transform: translate3d(0, -120px, 0);
+//     -webkit-transform: translate3d(0, -120px, 0);
+//     -moz-transform: translate3d(0, -120px, 0);
+//     -ms-transform: translate3d(0, -120px, 0);
+//     -o-transform: translate3d(0, -120px, 0);
+//   }
+//   80% {
+//     transform: translate3d(0, -160px, 0);
+//     -webkit-transform: translate3d(0, -160px, 0);
+//     -moz-transform: translate3d(0, -160px, 0);
+//     -ms-transform: translate3d(0, -160px, 0);
+//     -o-transform: translate3d(0, -160px, 0);
+//   }
+//   80.01% {
+//     transform: translate3d(0, 0px, 0);
+//     -webkit-transform: translate3d(0, 0px, 0);
+//     -moz-transform: translate3d(0, 0px, 0);
+//     -ms-transform: translate3d(0, 0px, 0);
+//     -o-transform: translate3d(0, 0px, 0);
+//   }
+// }
+@keyframes transform {
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(0, -40px, 0);
+    -webkit-transform: translate3d(0, -40px, 0);
+    -moz-transform: translate3d(0, -40px, 0);
+    -ms-transform: translate3d(0, -40px, 0);
+    -o-transform: translate3d(0, -40px, 0);
+  }
+  50% {
+    transform: translate3d(0, -80px, 0);
+    -webkit-transform: translate3d(0, -80px, 0);
+    -moz-transform: translate3d(0, -80px, 0);
+    -ms-transform: translate3d(0, -80px, 0);
+    -o-transform: translate3d(0, -80px, 0);
+  }
+  75% {
+    transform: translate3d(0, -120px, 0);
+    -webkit-transform: translate3d(0, -120px, 0);
+    -moz-transform: translate3d(0, -120px, 0);
+    -ms-transform: translate3d(0, -120px, 0);
+    -o-transform: translate3d(0, -120px, 0);
+  }
+  100% {
+    transform: translate3d(0, -160px, 0);
+    -webkit-transform: translate3d(0, -160px, 0);
+    -moz-transform: translate3d(0, -160px, 0);
+    -ms-transform: translate3d(0, -160px, 0);
+    -o-transform: translate3d(0, -160px, 0);
+  }
+}
+// responsive
+@media screen and (max-width: 993px) {
+  .trending {
+    padding: 20px 0;
+    .container {
+      width: 98%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trending {
+    margin-bottom: 20px;
+    .container {
+      width: 93%;
+      .trending-tag {
+        font-size: 15px;
+        .trending-icon {
+          font-size: 15px;
+        }
+      }
+      .trending-content {
+        font-size: 15px;
+        width: 100%;
+        li {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .trending {
+    margin-bottom: 20px;
+    .container {
+      .trending-content {
+        max-width: 100%;
+        li {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

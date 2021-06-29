@@ -1,0 +1,68 @@
+@import "../scss/variables.scss";
+
+.latest-news {
+  margin-top: 1%;
+
+  .container {
+    width: 84%;
+    margin: auto;
+    display: flex;
+    padding: 15px 0;
+    .latest-container {
+      width: 70%;
+      .loadmore-btn {
+        // margin-left: 10px;
+        margin-top: 20px;
+        width: 100%;
+        height: 46px;
+        font-size: 16px;
+        padding: 0 30px;
+        font-weight: bold;
+      }
+      .ant-btn-primary{
+        background-color: $primaryColor !important;
+        border-color: $primaryColor !important;
+        &:hover{
+            background-color: black !important;
+        }
+      }
+      .latest-news-title {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// responsive
+@media screen and (max-width: 1200px) {
+  .latest-news {
+    .container {
+      width: 90%;
+    }
+  }
+}
+@media screen and (max-width: 993px) {
+  .latest-news {
+    .container {
+      width: 98%;
+    }
+  }
+}
+@media screen and (max-width: 782px) {
+  .latest-news {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 93%;
+      .latest-container {
+        width: 100%;
+        flex: 100%;
+        .latest-news-title {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
